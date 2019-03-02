@@ -28,7 +28,7 @@ Copyright 2019 George Rennie, distributed under GPL V3
 2. Name the project and select its directory, iCEcube2 will create a directory with the project name in this directory for the code
 3. Select the device and its package (The Cu uses an iCE40 HX8K CB132)
 4. Check the other settings available if you wish to change them then click "Next"
-5. Locate where you have this repository installed and find any Pin Configuration Files from the folder of the same need that you need for the project and select them before clicking finish
 6. Locate all folders from within the appropriate base project in this repository's "Base Projects" folder and copy them into the new project's folder
-7. Finally right-click "Add Synthesis Files" and click "Add Files" in iCEcube2 then find all files you have just copied into the new folder and add them to the project
+7. Right-click "Add Synthesis Files" and click "Add Files" in iCEcube2 then find all files in the src and synthesis_constraints folder
+8. Right-click "Add P&R Files" and click "Add Files" in iCEcube2 then find all files in the pcfs folder
 8. Projects can now be built in much the same way as the previous section [Building a demo Project](#building-a-demo-project)
