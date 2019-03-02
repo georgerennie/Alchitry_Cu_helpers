@@ -12,7 +12,7 @@ DesignCell=top
 SynthesisSDCFile=Cu_Io_button_dip_led_test_Implmnt/Cu_Io_button_dip_led_test.scf
 UserPinConstraintFile=
 UserSDCFile=
-PhysicalConstraintFile=../../Pin Configuration Files/alchitry_io.pcf,../../Pin Configuration Files/alchitry_cu.pcf
+PhysicalConstraintFile=../../../../Pin Configuration Files/alchitry_cu.pcf,../../../../Pin Configuration Files/alchitry_cu_io.pcf
 BackendImplPathName=
 Devicevoltage=1.14
 DevicevoltagePerformance=+/-5%(datasheet default)
@@ -32,7 +32,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2017.08.27940 - Bui
 ProjectName=Cu_Io_button_dip_led_test
 Vendor=SiliconBlue
 Synthesis=synplify
-ProjectVFiles=src/top.v=work,../../Verilog Helpers/emulate_pulldown.v=work
+ProjectVFiles=src/top.v=work,src/emulate_pulldown.v=work
 ProjectCFiles=synthesis_constraints/clock_constraints.sdc
 CurImplementation=Cu_Io_button_dip_led_test_Implmnt
 Implementations=Cu_Io_button_dip_led_test_Implmnt

@@ -1,9 +1,9 @@
 #-- Synopsys, Inc.
-#-- Project file C:\!!Product Design\Shared Files\Verilog\Alchitry-Verilog-Helper-Files\Demo Projects\Cu_Io_button_dip_led_test\Cu_Io_button_dip_led_test_syn.prj
+#-- Project file C:\!!Product Design\Shared Files\Verilog\Alchitry-Verilog-Helper-Files\Demo Projects\Cu\Io\Cu_Io_button_dip_led_test\Cu_Io_button_dip_led_test_syn.prj
 #project files
 
 add_file -verilog -lib work "src/top.v" 
-add_file -verilog -lib work "../../Verilog Helpers/emulate_pulldown.v" 
+add_file -verilog -lib work "src/emulate_pulldown.v" 
 add_file -constraint -lib work "synthesis_constraints/clock_constraints.sdc"
 #implementation: "Cu_Io_button_dip_led_test_Implmnt"
 impl -add Cu_Io_button_dip_led_test_Implmnt -type fpga
