@@ -12,5 +12,18 @@ module top(
     input usb_rx,            // USB->Serial input
     output usb_tx            // USB->Serial output
     );
-    
+
+    //emulate_pull_down caters for the lack of pull down resistors on the Cu
+    /*wire[23:0] dip_pd_out;
+    emulate_pull_down #(.SIZE (24)) dip_pd(
+        .clk(clk),
+        .in(io_dip),
+        .out(dip_pd_out));
+
+    wire[4:0] button_pd_out;
+    emulate_pull_down #(.SIZE (5)) button_pd(
+        .clk(clk),
+        .in(io_button),
+        .out(button_pd_out));*/
+
 endmodule

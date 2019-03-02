@@ -12,10 +12,8 @@ module top(
     input usb_rx,            // USB->Serial input
     output usb_tx            // USB->Serial output
     );
-    
-    wire rst = ~rst_n;
-    assign usb_tx = usb_rx;  // echo the serial data
 
+    //emulate_pull_down caters for the lack of pull down resistors on the Cu
     wire[23:0] dip_pd_out;
     emulate_pull_down #(.SIZE (24)) dip_pd(
         .clk(clk),
@@ -29,7 +27,7 @@ module top(
         .out(button_pd_out));
     
     always @* begin
-        io_seg = 8'hFF;
+        io_seg = 8'hFF; //Turn 7 segs off (active low)
         io_sel = 4'hF;
 
         led = {3'h0, button_pd_out};
