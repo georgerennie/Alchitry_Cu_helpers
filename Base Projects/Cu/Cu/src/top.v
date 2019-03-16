@@ -1,6 +1,6 @@
 //Quickly include files from the George Rennie Verilog Modules Library:
-/*GRVM_PATH = "C:/George-Rennie-Verilog-Modules/"
-`include {GVRM_PATH, "FILENAME.v");*/
+/*`define GRVM_PATH(module_file_address) = "C:/George-Rennie-Verilog-Modules/module_file_address"
+`include `GRVM_PATH(GRVM_MODULE_DIRECTORY/GRVM_FILE.v)*/
 
 module top(
     input clk,               // 100MHz clock
