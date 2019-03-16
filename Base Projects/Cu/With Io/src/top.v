@@ -1,5 +1,9 @@
 `include "emulate_pull_down.v"
 
+//Quickly include files from the George Rennie Verilog Modules Library:
+/*GRVM_PATH = "C:/George-Rennie-Verilog-Modules/"
+`include {GVRM_PATH, "FILENAME.v");*/
+
 module top(
     input clk,               // 100MHz clock
     input rst_n,             // reset button (active low)
