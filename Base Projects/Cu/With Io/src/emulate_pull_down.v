@@ -1,6 +1,9 @@
 //A module to emulate pull down resistors by occasionally pulling outputs low
 //Built for use with alchitry CU and first gen alchitry IO boards
 
+`ifndef _emulate_pull_down_v_
+`define _emulate_pull_down_v_
+
 module emulate_pull_down #(parameter SIZE = 1) ( //Number of input pins
     input                 clk, //Clock
     inout      [SIZE-1:0] in,
@@ -38,3 +41,5 @@ module emulate_pull_down #(parameter SIZE = 1) ( //Number of input pins
         saved_q <= saved_d;
     end
 endmodule
+
+`endif
