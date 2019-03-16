@@ -1,3 +1,5 @@
+`include "emulate_pull_down.v"
+
 module top(
     input clk,               // 100MHz clock
     input rst_n,             // reset button (active low)
