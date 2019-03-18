@@ -1,7 +1,7 @@
 `include "emulate_pull_down.v"
 
 //Quickly include files from the George Rennie Verilog Modules Library:
-/*`define GRVM_PATH(module_file_address) = "C:/George-Rennie-Verilog-Modules/module_file_address"
+/*`define GRVM_PATH(module_file_address) "C:/George-Rennie-Verilog-Modules/module_file_address"
 `include `GRVM_PATH(GRVM_MODULE_DIRECTORY/GRVM_FILE.v)*/
 
 module top(
