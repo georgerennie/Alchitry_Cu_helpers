@@ -5,10 +5,13 @@
 `ifndef _ALCHITRY_EMULATE_PULL_DOWN_
 `define _ALCHITRY_EMUALTE_PULL_DOWN_
 
+`default_nettype none
+
 module emulate_pull_down #(parameter WIDTH = 1) (
-    input                 clk,
+    input                  clk,
     inout      [WIDTH-1:0] in,
-    output reg [WIDTH-1:0] out);
+    output reg [WIDTH-1:0] out
+);
 
     reg [3:0] counter;
     reg pull_low;
@@ -16,9 +19,9 @@ module emulate_pull_down #(parameter WIDTH = 1) (
     assign in = {WIDTH {pull_low ? 1'b0 : 1'bz}};
 
     always @(posedge clk) begin
-        if (counter == 0)
+        if (counter < 3)
             pull_low <= 1;
-        else if (counter > 2) begin
+        else begin
             pull_low <= 0;
             out <= in;
         end
